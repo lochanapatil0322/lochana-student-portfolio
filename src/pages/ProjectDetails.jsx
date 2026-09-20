@@ -1,6 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/portfolioData";
 
+const isRealLink = (url) => typeof url === "string" && url.startsWith("http");
+
 function ProjectDetails() {
   const { projectId } = useParams();
   const project = projects.find((item) => item.id === projectId);
@@ -16,7 +18,11 @@ function ProjectDetails() {
       <p className="lead-text">{project.description}</p>
       <div className="detail-box"><h2>Technologies used</h2><p>{project.technologies}</p></div>
       <div className="detail-box"><h2>What this project demonstrates</h2><p>{project.details}</p></div>
-      <Link className="secondary-button" to="/projects">Back to projects</Link>
+      <div className="button-row project-links">
+        {isRealLink(project.liveUrl) && <a className="primary-button" href={project.liveUrl} target="_blank" rel="noreferrer">View live project</a>}
+        {isRealLink(project.githubUrl) && <a className="secondary-button" href={project.githubUrl} target="_blank" rel="noreferrer">View on GitHub</a>}
+        <Link className="secondary-button" to="/projects">Back to projects</Link>
+      </div>
     </section>
   );
 }
