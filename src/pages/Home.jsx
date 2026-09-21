@@ -1,10 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ProfilePhoto from "../components/ProfilePhoto";
 import ProjectCard from "../components/ProjectCard";
 import { initialSkills, profile, projects } from "../data/portfolioData";
 
 function Home() {
-  const navigate = useNavigate();
   const featuredProjects = projects.filter((project) => project.type === "Web" || project.type === "Cyber Security");
 
   return (
@@ -19,7 +18,9 @@ function Home() {
             <p className="headline">{profile.headline}</p>
             <p className="location">{profile.location}</p>
             <div className="button-row">
-              <button className="primary-button" onClick={() => navigate("/contact")}>Contact me</button>
+              <a className="primary-button" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+              <a className="secondary-button" href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+              <a className="secondary-button" href={`mailto:${profile.email}`}>Email</a>
               <Link className="secondary-button" to="/projects">View projects</Link>
             </div>
           </div>

@@ -21,3 +21,4 @@ a { color: inherit; text-decoration: none; }
 
 .timeline-heading { margin-top: 34px; font-size: 22px; }
 .project-links { flex-wrap: wrap; margin-top: 24px; }
+.hero-card .button-row { flex-wrap: wrap; }
