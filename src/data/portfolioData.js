@@ -7,7 +7,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/lochana-patil-573786346/"
 };
 
-export const initialSkills = ["HTML", "CSS", "JavaScript", "ReactJS", "Node.js", "MongoDB", "Excel"];
+export const initialSkills = ["Time Management", "SQL", "Excel", "Database Handling"];
 
 export const projects = [
   {
