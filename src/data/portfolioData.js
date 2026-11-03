@@ -29,6 +29,16 @@ export const projects = [
     details: "An AI-powered Data Loss Prevention system that uses OCR, PII detection, and document security features to protect sensitive data.",
     liveUrl: "https://ocr-pii-dlp-deploy.vercel.app/",
     githubUrl: "https://github.com/lochanapatil0322/ocr-pii-dlp-deploy"
+  },
+  {
+    id: "jds-wafflory-ordering-system",
+    title: "JD's Wafflory: Online Ordering and Management System",
+    type: "Full-Stack Web Application",
+    technologies: "React, Vite, Tailwind CSS, FastAPI (Python), SQLAlchemy, PostgreSQL, JWT authentication, Cloudflare Workers, Render, Neon",
+    description: "A responsive ordering and management system for a two-branch street-food waffle cart in Navi Mumbai, built for a real business.",
+    details: "Customers browse the menu by branch, add items with sizes, choose dine-in or parcel, pick a pickup time and track their order status. The owner and staff use a role-based dashboard with live order alerts, per-branch sold-out switches, menu and price management, and daily sales reports. Prices are always calculated on the server, and the system was security tested with about 50 automated checks (access control, injection, rate limiting, security headers), with results compared before and after fixes.",
+    liveUrl: "https://jds-wafflory.jdswafflehub.workers.dev",
+    githubUrl: "https://github.com/lochanapatil0322/jds-wafflory.git"
   }
 ];
 
